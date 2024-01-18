@@ -122,8 +122,9 @@ server.post('/adduser', (req, res) => {
     res.status(200).json(user)
 })
 
-
-
+// Customer
+const routes = require('./Routes/Routes')
+server.use('/api/',routes)
 
 server.listen(5000, () => {
     console.log("Server Started")
