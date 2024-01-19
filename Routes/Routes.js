@@ -27,7 +27,7 @@ router.post("/addStdByMarks",StudentController.getStudentsBetweenMarks)
 router.post("/DeleteStd",StudentController.DeleteStd)
 router.post("/updatStdClass",StudentController.updatStdClass)
 
-module.exports = router;
+
 
 
 // Garments
@@ -40,5 +40,22 @@ router.post("/getGarByType",GarmentController.getGarByType)
 router.post("/getGarByPrice",GarmentController.getGarByPrice)
 router.post("/deleteGarments",GarmentController.deleteGarments)
 router.post("/updateGarment",GarmentController.updateGarment)
+
+// Orders
+const OrderControler = require("../Controlers/OrderControler");
+
+
+router.post("/addOrder",OrderControler.addOrder);
+router.get("/getallorder",OrderControler.getallorders);
+
+
+
+
+// Product 
+
+const ProductControler = require ("../Controlers/ProductControler");
+
+router.post ("/addProduct" , ProductControler .addProduct);
+router.get ("/getallProduct" , ProductControler .getallProduct);
 
 module.exports = router;

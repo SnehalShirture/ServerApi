@@ -11,4 +11,4 @@ const EmployerSchema = mongoose.Schema({
     EmpAge:{type:Number , min:[18,"Age should be more than 18"]}
 })
 
-module.exports = mongoose.model('customer',EmployerSchema)
+module.exports = mongoose.model('Employer',EmployerSchema)
